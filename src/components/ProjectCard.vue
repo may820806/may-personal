@@ -17,11 +17,11 @@
 </template>
 
 <script setup lang="ts">
-import { IProject } from '../interfaces/interfaces';
+import type { IProject } from '../interfaces/interfaces';
 
 defineProps<IProject>();
 
-const toWebsite = (url: string) => {
+const toWebsite = (url?: string) => {
   if(url) {
     window.open(url, '_blank');
   }

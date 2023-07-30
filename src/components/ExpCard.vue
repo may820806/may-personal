@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { IExp } from '../interfaces/interfaces';
+import type { IExp } from '../interfaces/interfaces';
 
 defineProps<IExp>();
 

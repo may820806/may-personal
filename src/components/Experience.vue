@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IExp } from '../interfaces/interfaces';
+import type { IExp } from '../interfaces/interfaces';
 import ExpCard from './ExpCard.vue';
 import { ref } from 'vue';
 
@@ -10,14 +10,14 @@ const experienceData = ref<IExp[]>([
     content: '做過四間電商美編設計，曾參與過 <strong>3個嘖嘖百萬募資案</strong> 設計與攝影。'
   },
   {
-    title: '2020/8',
+    title: '2020/8~2021/1',
     subtitle: '泰嘉數位媒體 - 前端工程師',
     content: '大宇資訊子公司，產品為「遊戲基地Gamebase」，將php義大利麵程式碼轉為前後端分離 Vue2 + Nuxt.js 框架。串接內部API，第三方登入等。'
   },
   {
-    title: '2021/1 ~ 2023',
+    title: '2021/1~Now',
     subtitle: '麋鹿樹工作室 - 前端工程師',
-    content: '遠端接案公司，開發或維護過官方形象網站與後台管理系統約 12 個專案。'
+    content: '遠端接案公司，開發或維護過官方形象網站與後台管理系統約 <strong>12</strong> 個專案。'
   }
 ]);
 

@@ -18,6 +18,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import SkillsCard from './SkillsCard.vue';
+import type { ISkills } from '../interfaces/interfaces';
 
 const skillsData = ref<ISkills[]>([
   {
@@ -58,9 +60,6 @@ const skillsData = ref<ISkills[]>([
     description: 'Git flow'
   }
 ]);
-
-import SkillsCard from './SkillsCard.vue';
-import { ISkills } from '../interfaces/interfaces';
 </script>
 
 <style lang="scss" scoped>

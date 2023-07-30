@@ -2,22 +2,24 @@
 import { gsap } from 'gsap';
 import { onMounted, ref } from 'vue';
 
-const name = ref<null>();
-const jobTitle = ref<null>();
+const name = ref<gsap.TweenTarget>();
+const jobTitle = ref<gsap.TweenTarget>();
 
 onMounted(() => {
   animation();
 });
 
 const animation = () => {
-  const tl = gsap.timeline();
-  tl.to(name.value, {
-    y: 0,
-    duration: 1,
-  }).to(jobTitle.value, {
-    y: 0,
-    duration: 1,
-  });
+  if(name.value && jobTitle.value) {
+    const tl = gsap.timeline();
+    tl.to(name.value, {
+      y: 0,
+      duration: 1,
+    }).to(jobTitle.value, {
+      y: 0,
+      duration: 1,
+    });
+  }
 };
 
 </script>
@@ -41,7 +43,7 @@ const animation = () => {
       <div class="profile-wrap">
         <img
           class="profile"
-          src="src/assets/profile.jpg"
+          src="/src/assets/profile.jpg"
           alt="may weng profile photo"
         >
       </div>

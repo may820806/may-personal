@@ -8,7 +8,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ISkills } from '../interfaces/interfaces';
+import type { ISkills } from '../interfaces/interfaces';
 
 defineProps<ISkills>();
 

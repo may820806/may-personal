@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import ProjectCard from './ProjectCard.vue';
-import { IProject } from '../interfaces/interfaces';
+import type { IProject } from '../interfaces/interfaces';
 
 const projectData = ref<IProject[]>([
   {
