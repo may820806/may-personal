@@ -67,4 +67,11 @@ hgroup {
   }
 }
 
+@media screen and (max-width: 768px) {
+  section {
+    height: fit-content;
+    margin: 60px 0;
+  }
+}
+
 </style>

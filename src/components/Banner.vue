@@ -43,7 +43,7 @@ const animation = () => {
       <div class="profile-wrap">
         <img
           class="profile"
-          src="/src/assets/profile.jpg"
+          src="src/assets/profile.jpg"
           alt="may weng profile photo"
         >
       </div>
@@ -59,7 +59,7 @@ const animation = () => {
   align-items: center;
   width: 100%;
   height: 80vh;
-  background-image: url('https://images.unsplash.com/photo-1678770249280-6cd8e2b64d0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1673&q=80');
+  background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 79%;
@@ -79,6 +79,7 @@ hgroup {
 
   h1, h3 {
     color: white;
+    text-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   }
 
   h3 {
@@ -105,6 +106,8 @@ hgroup {
 .profile-wrap {
   width: 200px;
   height: 200px;
+  margin-bottom: 30px;
+
   
   img {
     width: 100%;
@@ -112,4 +115,24 @@ hgroup {
   }
 }
 
+
+@media screen and (max-width: 768px) {
+  section {
+    flex-direction: column-reverse;
+  }
+
+  hgroup {
+    margin: auto 0 auto 0;
+  }
+  
+  .profile-wrap {
+    width: 100px;
+    height: 100px;
+  
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+}
 </style>

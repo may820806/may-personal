@@ -65,6 +65,12 @@ const toWebsite = (url?: string) => {
       margin-bottom: 12px;
     }
   }
+}
 
+@media screen and (max-width: 768px) {
+  .project-card-wrapper {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 </style>

@@ -44,4 +44,16 @@ footer {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 768px) {
+
+  footer {
+    width: 102%;
+    padding-right: 0;
+    
+    p {
+      text-align: center;
+    }
+  }
+}
 </style>

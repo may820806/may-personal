@@ -9,6 +9,7 @@
 body {
   font-family: 'Roboto', 'Noto Sans TC', sans-serif;
   color: #4b4b4b;
+  overflow-x: hidden;
 }
 
 ::-moz-selection { /* Code for Firefox */

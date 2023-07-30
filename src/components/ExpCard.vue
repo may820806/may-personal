@@ -37,4 +37,10 @@ defineProps<IExp>();
     font-weight: 500;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .exp-card-wrapper {
+    width: 85vw;
+  }
+}
 </style>

@@ -62,14 +62,8 @@ const projectData = ref<IProject[]>([
   {
     image: 'src/assets/projects/elktree.png',
     title: 'Elk Tree Studio',
-    description: '主動向老闆提出UI/UX設計並切版，使用Nuxt3。',
+    description: '主動向老闆提出由我執行UI設計並切版，使用Nuxt3。',
     url: 'http://elk-tree.studio//'
-  },
-  {
-    image: 'src/assets/projects/demo2.png',
-    title: 'Elk Tree DEMO 2',
-    description: '公司DEMO用的後台系統，使用react.js, ant design',
-    url: 'https://main--cms-client.netlify.app/cms/users/signin'
   }
 ]);
 
@@ -98,5 +92,9 @@ const projectData = ref<IProject[]>([
     max-width: 1000px;
     margin: auto;
   }
+}
+
+@media screen and (max-width: 768px) {
+
 }
 </style>
