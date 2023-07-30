@@ -43,7 +43,7 @@ const animation = () => {
       <div class="profile-wrap">
         <img
           class="profile"
-          src="src/assets/profile.jpg"
+          src="/src/assets/photo.jpg"
           alt="may weng profile photo"
         >
       </div>
