@@ -23,39 +23,39 @@ import type { ISkills } from '../interfaces/interfaces';
 
 const skillsData = ref<ISkills[]>([
   {
-    icon: './src/assets/icons/html.png',
+    icon: '/icons/html.png',
     title: 'HTML',
     description: 'Semantic Elements'
   },
   {
-    icon: './src/assets/icons/css.png',
+    icon: '/icons/css.png',
     title: 'CSS',
     description: 'RWD, animation'
   },
   {
-    icon: './src/assets/icons/javascript.png',
+    icon: '/icons/javascript.png',
     title: 'Javascript',
   },
   {
-    icon: './src/assets/icons/vue.png',
+    icon: '/icons/vue.png',
     title: 'Vue.js',
     description: 'Nuxt.js, Vite, Vuex, Pinia, Prime vue...'
   },
   {
-    icon: './src/assets/icons/react.png',
+    icon: '/icons/react.png',
     title: 'React',
     description: 'Next.js, MUI...'
   },
   {
-    icon: './src/assets/icons/typescript.png',
+    icon: '/icons/typescript.png',
     title: 'Typescript',
   },
   {
-    icon: './src/assets/icons/scss.png',
+    icon: '/icons/scss.png',
     title: 'SASS/SCSS',
   },
   {
-    icon: './src/assets/icons/git.png',
+    icon: '/icons/git.png',
     title: 'GIT',
     description: 'Git flow'
   }
