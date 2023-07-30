@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+  color: #4b4b4b;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #2D4D42;
+}
+
+::selection {
+  color: white;
+  background: #2D4D42;
+}
