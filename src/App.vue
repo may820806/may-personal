@@ -4,10 +4,10 @@ import About from './components/About.vue';
 import Experience from './components/Experience.vue';
 import Skills from './components/Skills.vue';
 import Projects from './components/Projects.vue';
+import Email from './components/Email.vue';
 
 import 'primevue/resources/primevue.min.css';
 import 'primevue/resources/themes/saga-orange/theme.css';
-import { gsap } from 'gsap';
 
 </script>
 
@@ -17,6 +17,7 @@ import { gsap } from 'gsap';
   <Experience />
   <Skills />
   <Projects />
+  <Email />
   <footer>
     <p>
       Copyright © 2023, May Weng may820806@gmail.com

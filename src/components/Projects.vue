@@ -39,7 +39,7 @@ const projectData = ref<IProject[]>([
     image: '/projects/aeo.png',
     title: 'Aeolous',
     description: '機器人產品之RWD官方網站，採用Next.js框架。Recoil狀態管理、Splide.js、emailjs，部分手刻CSS動畫',
-    url: 'https://aeolus-dev.netlify.app/'
+    url: 'https://aeolusbot.com/'
   },
   {
     image: '/projects/liff.png',
