@@ -33,7 +33,7 @@ const skillsData = ref<ISkills[]>([
     description: 'RWD, animation'
   },
   {
-    icon: '/icons/javascript.png',
+    icon: '/icons/Javascript.png',
     title: 'Javascript',
   },
   {
