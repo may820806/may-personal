@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import gsap from 'gsap';
 import type { IExp } from '../interfaces/interfaces';
 import ExpCard from './ExpCard.vue';
 import { ref } from 'vue';
@@ -7,7 +8,7 @@ const experienceData = ref<IExp[]>([
   {
     title: '2015~2020',
     subtitle: '平面設計',
-    content: '做過四間電商美編設計，曾參與過 <strong>3個嘖嘖百萬募資案</strong> 設計與攝影。'
+    content: '做過四間電商公司美編設計，曾參與過 <strong>3個嘖嘖百萬募資案</strong> 設計與攝影。'
   },
   {
     title: '2020/8~2021/1',
@@ -17,9 +18,27 @@ const experienceData = ref<IExp[]>([
   {
     title: '2021/1~Now',
     subtitle: '麋鹿樹工作室 - 前端工程師',
-    content: '遠端接案公司，開發或維護過官方形象網站與後台管理系統約 <strong>12</strong> 個專案。'
+    content: '遠端接案公司，開發或維護過官方形象網站與後台管理系統約 <strong>13</strong> 個專案。'
   }
 ]);
+
+
+const tl = gsap.timeline();
+
+tl.to('.exp-wrapper', {
+  y: 0,
+  stagger: {
+    amount: .4
+  },
+  delay: 5,
+  scrollTrigger: {
+    trigger: '.about-wrapper',
+    scrub: 1,
+    start: 'top',
+    end: 'bottom',
+    pin: true
+  }
+});
 
 </script>
 
@@ -58,11 +77,15 @@ const experienceData = ref<IExp[]>([
 <style lang="scss" scoped>
 
 .exp-wrapper {
+  position: absolute;
+  top: 200vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f3f3f3;
+  /* background-color: #f3f3f3; */
   padding: 60px 0;
+  background-color: #f3f3f3;
 }
 
 section {

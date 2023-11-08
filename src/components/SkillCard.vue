@@ -1,5 +1,5 @@
 <template>
-  <div class="skills-card-wrapper">
+  <div class="skill-card-wrapper">
     <img :src="icon">
     <div class="texts">
       <h4>{{ title }}</h4>
@@ -8,14 +8,14 @@
   </div>
 </template>
 <script setup lang="ts">
-import type { ISkills } from '../interfaces/interfaces';
+import type { ISkill } from '../interfaces/interfaces';
 
-defineProps<ISkills>();
+defineProps<ISkill>();
 
 </script>
 
 <style lang="scss" scoped>
-.skills-card-wrapper {
+.skill-card-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +25,7 @@ defineProps<ISkills>();
   padding: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
+  background-color: white;
 
   img {
     width: 35px;

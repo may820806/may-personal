@@ -4,7 +4,7 @@ export interface IExp {
   content: string;
 }
 
-export interface ISkills {
+export interface ISkill {
   icon: string;
   title: string;
   description?: string;

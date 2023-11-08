@@ -1,9 +1,9 @@
 <template>
-  <div class="skills-wrapper">
-    <h1>Skills</h1>
-    <div class="skills-cards">
-      <SkillsCard
-        v-for="(item, index) in skillsData"
+  <div class="skill-wrapper">
+    <h1>Skill</h1>
+    <div class="skill-cards">
+      <skillCard
+        v-for="(item, index) in skillData"
         :key="item.title"
         data-aos="flip-left"
         :data-aos-duration="1000"
@@ -18,10 +18,27 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import SkillsCard from './SkillsCard.vue';
-import type { ISkills } from '../interfaces/interfaces';
+import skillCard from './SkillCard.vue';
+import type { ISkill } from '../interfaces/interfaces';
+import gsap from 'gsap';
 
-const skillsData = ref<ISkills[]>([
+const tl = gsap.timeline();
+
+tl.to('.skill-wrapper', {
+  y: 0,
+  stagger: {
+    amount: .4
+  },
+  scrollTrigger: {
+    trigger: '.exp-wrapper',
+    scrub: 1,
+    start: 'top',
+    end: 'bottom',
+    pin: true
+  }
+});
+
+const skillData = ref<ISkill[]>([
   {
     icon: '/icons/html.png',
     title: 'HTML',
@@ -63,12 +80,20 @@ const skillsData = ref<ISkills[]>([
 </script>
 
 <style lang="scss" scoped>
-.skills-wrapper {
+.skill-wrapper {
+  position: absolute;
+  top: 300vh;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 60px 0;
+  background-image: url("https://images.unsplash.com/photo-1538438253612-287c9fc9217e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   h1 {
     margin-bottom: 30px;
@@ -77,7 +102,7 @@ const skillsData = ref<ISkills[]>([
     color: #2D4D42;
   }
 
-  .skills-cards {
+  .skill-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -87,8 +112,8 @@ const skillsData = ref<ISkills[]>([
 }
 
 @media screen and (min-width: 914px) {
-  .skills-wrapper {
-    .skills-cards {
+  .skill-wrapper {
+    .skill-cards {
       justify-content: center;
     }
   }

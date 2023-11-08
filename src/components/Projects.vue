@@ -1,8 +1,6 @@
 <template>
   <div
     class="project-wrapper"
-    data-aos="fade-up"
-    data-aos-duration="1000"
   >
     <h1>Projects</h1>
     <section>
@@ -22,6 +20,23 @@
 import { ref } from 'vue';
 import ProjectCard from './ProjectCard.vue';
 import type { IProject } from '../interfaces/interfaces';
+import gsap from 'gsap';
+
+const tl = gsap.timeline();
+
+tl.to('.project-wrapper', {
+  y: 0,
+  stagger: {
+    amount: .4
+  },
+  scrollTrigger: {
+    trigger: '.skill-wrapper',
+    scrub: 1,
+    start: 'top',
+    end: 'bottom',
+    pin: true
+  }
+});
 
 const projectData = ref<IProject[]>([
   {
@@ -73,8 +88,12 @@ const projectData = ref<IProject[]>([
 <style lang="scss" scoped>
 
 .project-wrapper {
+  position: absolute;
+  top: 400vh;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
   padding: 60px 0 60px 0;
-  border-radius: 10px;
   background-color: #f3f3f3;
 
   h1 {

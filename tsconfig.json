@@ -5,7 +5,7 @@
     "vite.config.ts",
     ".eslintrc.json",
     "env.d.ts"
-  ],
+, "vite.d.ts"  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

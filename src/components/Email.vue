@@ -136,12 +136,12 @@ const sendEmail = () => {
 }
 
 @media screen and (min-width: 914px) {
-  .skills-wrapper {
+  .skill-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    .skills-cards {
+    .skill-cards {
       justify-content: center;
     }
   }

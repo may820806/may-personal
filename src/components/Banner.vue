@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import EasePack from "gsap/EasePack";
-import Text from "gsap/TextPlugin";
+import { onMounted } from 'vue';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import EasePack from 'gsap/EasePack';
+import Text from 'gsap/TextPlugin';
 
 gsap.registerPlugin(ScrollTrigger, Text, EasePack);
 
@@ -13,19 +13,19 @@ onMounted(() => {
 
 ScrollTrigger.defaults({
   // reverse: 往回拉的時候標題會回來
-  toggleActions: "play none none reverse",
+  toggleActions: 'play none none reverse',
 });
 
 const animation = () => {
-  const words = [" ", "MAY WENG"];
+  const words = [' ', 'MAY WENG'];
 
-  gsap.to(".hi", {
+  gsap.to('.hi', {
     y: 0,
   });
 
-  gsap.to(".cursor", {
+  gsap.to('.cursor', {
     opacity: 0,
-    ease: "power2.inOut",
+    ease: 'power2.inOut',
     repeat: -1, //無限,
   });
 
@@ -36,9 +36,9 @@ const animation = () => {
       .timeline({
         yoyo: true,
       })
-      .to(".name", {
+      .to('.name', {
         duration: 1,
-        text: word,
+        text: word
       });
     masterTl.add(tl);
   });
@@ -50,7 +50,9 @@ const animation = () => {
     <section>
       <hgroup>
         <div class="hi-container">
-          <h3 class="hi">Hi, I am</h3>
+          <h3 class="hi">
+            Hi, I am
+          </h3>
         </div>
         <div class="name-cursor">
           <h1 class="name" />
@@ -58,7 +60,9 @@ const animation = () => {
         </div>
 
         <div class="overflow-area">
-          <h3 class="jobTitle">Front End Web Developer</h3>
+          <h3 class="jobTitle">
+            Front End Web Developer
+          </h3>
         </div>
       </hgroup>
       <div class="profile-wrap">
@@ -66,7 +70,7 @@ const animation = () => {
           class="profile"
           src="/src/assets/photo.jpg"
           alt="may weng profile photo"
-        />
+        >
       </div>
     </section>
   </div>
@@ -74,6 +78,8 @@ const animation = () => {
 
 <style lang="scss" scoped>
 .banner-wrapper {
+  position: absolute;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;

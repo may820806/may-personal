@@ -2,7 +2,7 @@
 import Banner from './components/Banner.vue';
 import About from './components/About.vue';
 import Experience from './components/Experience.vue';
-import Skills from './components/Skills.vue';
+import Skill from './components/Skill.vue';
 import Projects from './components/Projects.vue';
 import Email from './components/Email.vue';
 
@@ -15,24 +15,25 @@ import 'primevue/resources/themes/saga-orange/theme.css';
   <Banner />
   <About />
   <Experience />
-  <Skills />
+  <Skill />
   <Projects />
   <Email />
-  <footer>
+  <!-- <footer>
     <p>
       Copyright © 2023, May Weng may820806@gmail.com
     </p>
-  </footer>
+  </footer> -->
 </template>
 
 <style lang="scss" scoped>
 
 
 footer {
-  position: relative;
+  position: fixed;
+  bottom: 0;
   right: 10px;
   width: 100.6%;
-  height: 40px;
+  height: 30px;
   padding-right: 10px;
   margin: auto;
   font-size: 14px;
