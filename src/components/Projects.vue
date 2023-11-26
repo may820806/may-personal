@@ -13,6 +13,7 @@
         :description="project.description"
       />
     </section>
+    <Email />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import { ref } from 'vue';
 import ProjectCard from './ProjectCard.vue';
 import type { IProject } from '../interfaces/interfaces';
 import gsap from 'gsap';
+import Email from './Email.vue';
 
 const tl = gsap.timeline();
 
@@ -33,8 +35,8 @@ tl.to('.project-wrapper', {
     trigger: '.skill-wrapper',
     scrub: 1,
     start: 'top',
-    end: 'bottom',
-    pin: true
+    end: '130%',
+    pin: true,
   }
 });
 
@@ -89,11 +91,12 @@ const projectData = ref<IProject[]>([
 
 .project-wrapper {
   position: absolute;
-  top: 400vh;
-  width: 100%;
+  top: 480vh;
   flex-direction: column;
   display: flex;
-  padding: 60px 0 60px 0;
+  width: 100%;
+  padding-top: 60px;
+  margin-bottom: 60px;
   background-color: #f3f3f3;
 
   h1 {
@@ -109,7 +112,7 @@ const projectData = ref<IProject[]>([
     justify-content: flex-start;
     width: 80%;
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto 60px auto;
   }
 }
 

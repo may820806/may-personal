@@ -27,16 +27,12 @@ const tl = gsap.timeline();
 
 tl.to('.exp-wrapper', {
   y: 0,
-  stagger: {
-    amount: .4
-  },
   delay: 5,
   scrollTrigger: {
     trigger: '.about-wrapper',
-    scrub: 1,
     start: 'top',
-    end: 'bottom',
-    pin: true
+    end: '120%',
+    pin: true,
   }
 });
 
@@ -46,20 +42,13 @@ tl.to('.exp-wrapper', {
   <div class="exp-wrapper">
     <section>
       <h1>Experience</h1>
-      
       <ExpCard
-        v-for="(exp, index) in experienceData"
+        v-for="(exp) in experienceData"
         :key="exp.title"
-        data-aos="flip-down"
-        :data-aos-duration="1000"
-        :data-aos-delay="index * 200"
         class="exp-card"
         :title="exp.title"
         :subtitle="exp.subtitle"
         :content="exp.content"
-      />
-      <!-- <Timeline
-        :value="events"
       >
         <template #content="{item}">
           <ExpCard
@@ -69,7 +58,7 @@ tl.to('.exp-wrapper', {
             :content="item.content"
           />
         </template>
-      </Timeline> -->
+      </ExpCard>
     </section>
   </div>
 </template>
@@ -80,10 +69,10 @@ tl.to('.exp-wrapper', {
   position: absolute;
   top: 200vh;
   width: 100%;
+  min-height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #f3f3f3; */
   padding: 60px 0;
   background-color: #f3f3f3;
 }

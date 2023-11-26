@@ -3,11 +3,8 @@
     <h1>Skill</h1>
     <div class="skill-cards">
       <skillCard
-        v-for="(item, index) in skillData"
+        v-for="(item) in skillData"
         :key="item.title"
-        data-aos="flip-left"
-        :data-aos-duration="1000"
-        :data-aos-delay="index * 100"
         :icon="item.icon"
         :title="item.title"
         :description="item.description"
@@ -26,15 +23,14 @@ const tl = gsap.timeline();
 
 tl.to('.skill-wrapper', {
   y: 0,
-  stagger: {
-    amount: .4
-  },
+  // stagger: {
+  //   amount: .4
+  // },
   scrollTrigger: {
     trigger: '.exp-wrapper',
-    scrub: 1,
     start: 'top',
     end: 'bottom',
-    pin: true
+    pin: true,
   }
 });
 
@@ -82,14 +78,14 @@ const skillData = ref<ISkill[]>([
 <style lang="scss" scoped>
 .skill-wrapper {
   position: absolute;
-  top: 300vh;
+  top: 361vh;
   width: 100%;
   height: 100vh;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 0;
   background-image: url("https://images.unsplash.com/photo-1538438253612-287c9fc9217e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-repeat: no-repeat;

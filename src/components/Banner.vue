@@ -115,7 +115,7 @@ hgroup {
   h3,
   cursor {
     color: white;
-    text-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    text-shadow: rgba(127, 112, 112, 0.16) 0px 10px 36px 0px,
       rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   }
 
@@ -138,6 +138,22 @@ hgroup {
   .job-title {
     font-size: 20px;
     font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .banner-wrapper{
+    .name, .cursor {
+      font-size: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .banner-wrapper{
+    .name, .cursor {
+      font-size: 40px;
+    }
   }
 }
 

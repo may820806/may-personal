@@ -34,11 +34,19 @@
           max-length="200"
         />
       </div>
-      <button class="send-button" @click="sendEmail">
+      <button
+        class="send-button"
+        @click="sendEmail"
+      >
         <p v-show="!loading">
           送出
         </p>
-        <img v-show="loading" class="loading-img" src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif" alt="loading">
+        <img
+          v-show="loading"
+          class="loading-img"
+          src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif"
+          alt="loading"
+        >
       </button>
     </div>
   </div>
@@ -47,7 +55,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import emailjs from '@emailjs/browser';
-
+import gsap from 'gsap';
 const loading = ref<boolean>(false);
 const name = ref<string>();
 const email = ref<string>();
@@ -56,6 +64,20 @@ const message = ref<string>();
 const columnValidate = () => {
     return (name.value && email.value && message.value);
   };
+
+
+const tl = gsap.timeline();
+
+tl.to('.email-wrapper', {
+  y: 0,
+  delay: 5,
+  scrollTrigger: {
+    trigger: '.project-wrapper',
+    start: 'top',
+    end: 'bottom',
+  }
+});
+
 
 
 const sendEmail = () => {
@@ -84,11 +106,13 @@ const sendEmail = () => {
 
 <style lang="scss" scoped>
 .email-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 60px 0;
+  background-color: white;
 
   h1 {
     margin-bottom: 30px;

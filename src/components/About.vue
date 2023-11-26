@@ -5,15 +5,11 @@ const tl = gsap.timeline();
 
 tl.to('.about-wrapper', {
   y: 0,
-  stagger: {
-    amount: .4
-  },
   delay: 5,
   scrollTrigger: {
     trigger: '.banner-wrapper',
-    scrub: 1,
     start: 'top',
-    end: 'bottom',
+    end: '70%',
     pin: true,
   }
 });
@@ -50,13 +46,19 @@ tl.to('.about-wrapper', {
 .about-wrapper {
   position: absolute;
   top: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-image: url("https://images.unsplash.com/photo-1483794344563-d27a8d18014e?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
+}
+
+@media screen and (max-width: 650px) {
+  .about-wrapper {
+    background-position: 40%;
+  }
 }
 
 section {

@@ -4,7 +4,6 @@ import About from './components/About.vue';
 import Experience from './components/Experience.vue';
 import Skill from './components/Skill.vue';
 import Projects from './components/Projects.vue';
-import Email from './components/Email.vue';
 
 import 'primevue/resources/primevue.min.css';
 import 'primevue/resources/themes/saga-orange/theme.css';
@@ -17,7 +16,6 @@ import 'primevue/resources/themes/saga-orange/theme.css';
   <Experience />
   <Skill />
   <Projects />
-  <Email />
   <!-- <footer>
     <p>
       Copyright © 2023, May Weng may820806@gmail.com
