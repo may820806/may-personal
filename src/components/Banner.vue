@@ -94,6 +94,7 @@ const animation = () => {
 section {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 80%;
   max-width: 1000px;
 }
@@ -158,9 +159,10 @@ hgroup {
 }
 
 .profile-wrap {
+  display: flex;
+  align-items: center;
   width: 200px;
   height: 200px;
-  margin-bottom: 30px;
 
   img {
     width: 100%;
@@ -171,9 +173,11 @@ hgroup {
 @media screen and (max-width: 768px) {
   section {
     flex-direction: column-reverse;
+    align-items: flex-end;
+    width: auto;
   }
-
   hgroup {
+    min-width: 0;
     margin: auto 0 auto 0;
   }
 
@@ -184,6 +188,14 @@ hgroup {
     img {
       width: 100%;
       border-radius: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  hgroup {
+    .name {
+      font-size: 50px;
     }
   }
 }

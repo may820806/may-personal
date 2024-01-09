@@ -23,9 +23,9 @@ const tl = gsap.timeline();
 
 tl.to('.skill-wrapper', {
   y: 0,
-  // stagger: {
-  //   amount: .4
-  // },
+  stagger: {
+    amount: .4
+  },
   scrollTrigger: {
     trigger: '.exp-wrapper',
     start: 'top',
@@ -78,7 +78,7 @@ const skillData = ref<ISkill[]>([
 <style lang="scss" scoped>
 .skill-wrapper {
   position: absolute;
-  top: 361vh;
+  top: 300vh;
   width: 100%;
   height: 100vh;
   padding-top: 60px;

@@ -31,7 +31,7 @@ tl.to('.exp-wrapper', {
   scrollTrigger: {
     trigger: '.about-wrapper',
     start: 'top',
-    end: '120%',
+    end: 'bottom',
     pin: true,
   }
 });
@@ -69,12 +69,17 @@ tl.to('.exp-wrapper', {
   position: absolute;
   top: 200vh;
   width: 100%;
-  min-height: 110vh;
+  min-height: 100vh;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 0;
   background-color: #f3f3f3;
+}
+
+@media screen and (max-width: 768px) {
+  
 }
 
 section {

@@ -33,9 +33,8 @@ tl.to('.project-wrapper', {
   },
   scrollTrigger: {
     trigger: '.skill-wrapper',
-    scrub: 1,
     start: 'top',
-    end: '130%',
+    end: 'bottom',
     pin: true,
   }
 });
@@ -91,7 +90,7 @@ const projectData = ref<IProject[]>([
 
 .project-wrapper {
   position: absolute;
-  top: 480vh;
+  top: 420vh;
   flex-direction: column;
   display: flex;
   width: 100%;
