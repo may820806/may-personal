@@ -16,11 +16,6 @@ import 'primevue/resources/themes/saga-orange/theme.css';
   <Experience />
   <Skill />
   <Projects />
-  <!-- <footer>
-    <p>
-      Copyright © 2023, May Weng may820806@gmail.com
-    </p>
-  </footer> -->
 </template>
 
 <style lang="scss" scoped>

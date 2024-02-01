@@ -145,14 +145,6 @@ hgroup {
 @media screen and (max-width: 650px) {
   .banner-wrapper{
     .name, .cursor {
-      font-size: 60px;
-    }
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .banner-wrapper{
-    .name, .cursor {
       font-size: 40px;
     }
   }
@@ -170,11 +162,12 @@ hgroup {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   section {
     flex-direction: column-reverse;
-    align-items: flex-end;
-    width: auto;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 5%;
   }
   hgroup {
     min-width: 0;
@@ -182,20 +175,14 @@ hgroup {
   }
 
   .profile-wrap {
-    width: 100px;
+    width: 20%;
+    max-width: 100px;
     height: 100px;
+    margin-bottom: 14px;
 
     img {
       width: 100%;
       border-radius: 50%;
-    }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  hgroup {
-    .name {
-      font-size: 50px;
     }
   }
 }

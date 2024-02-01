@@ -18,7 +18,7 @@ const experienceData = ref<IExp[]>([
   {
     title: '2021/1~Now',
     subtitle: '麋鹿樹工作室 - 前端工程師',
-    content: '遠端接案公司，開發或維護過官方形象網站與後台管理系統約 <strong>13</strong> 個專案。'
+    content: '遠端接案公司，開發或維護過官方形象網站與後台管理系統約10多個專案。'
   }
 ]);
 
@@ -69,17 +69,13 @@ tl.to('.exp-wrapper', {
   position: absolute;
   top: 200vh;
   width: 100%;
-  min-height: 100vh;
+  min-height: 120vh;
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 0;
   background-color: #f3f3f3;
-}
-
-@media screen and (max-width: 768px) {
-  
 }
 
 section {

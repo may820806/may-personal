@@ -3,8 +3,11 @@
     <h1>Skill</h1>
     <div class="skill-cards">
       <skillCard
-        v-for="(item) in skillData"
+        v-for="(item, index) in skillData"
         :key="item.title"
+        data-aos="flip-left"
+        :data-aos-duration="1000"
+        :data-aos-delay="index * 100"
         :icon="item.icon"
         :title="item.title"
         :description="item.description"
@@ -17,22 +20,6 @@
 import { ref } from 'vue';
 import skillCard from './SkillCard.vue';
 import type { ISkill } from '../interfaces/interfaces';
-import gsap from 'gsap';
-
-const tl = gsap.timeline();
-
-tl.to('.skill-wrapper', {
-  y: 0,
-  stagger: {
-    amount: .4
-  },
-  scrollTrigger: {
-    trigger: '.exp-wrapper',
-    start: 'top',
-    end: 'bottom',
-    pin: true,
-  }
-});
 
 const skillData = ref<ISkill[]>([
   {
@@ -78,10 +65,10 @@ const skillData = ref<ISkill[]>([
 <style lang="scss" scoped>
 .skill-wrapper {
   position: absolute;
-  top: 300vh;
+  top: 320vh;
   width: 100%;
-  height: 100vh;
-  padding-top: 60px;
+  min-height: 120vh;
+  padding: 60px 2% 2% 2%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,11 +94,12 @@ const skillData = ref<ISkill[]>([
   }
 }
 
-@media screen and (min-width: 914px) {
+@media screen and (max-width: 960px) {
   .skill-wrapper {
     .skill-cards {
-      justify-content: center;
+      gap: 18px;
     }
   }
 }
+
 </style>

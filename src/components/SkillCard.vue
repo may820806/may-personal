@@ -44,4 +44,20 @@ defineProps<ISkill>();
     font-size: 25px;
   }
 }
+
+@media screen and (max-width: 960px) {
+  .skill-card-wrapper {
+    padding: 8px;
+    height: 70px;
+  }
+  .texts {
+    h4 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
 </style>

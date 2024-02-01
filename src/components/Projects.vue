@@ -21,29 +21,14 @@
 import { ref } from 'vue';
 import ProjectCard from './ProjectCard.vue';
 import type { IProject } from '../interfaces/interfaces';
-import gsap from 'gsap';
+
 import Email from './Email.vue';
-
-const tl = gsap.timeline();
-
-tl.to('.project-wrapper', {
-  y: 0,
-  stagger: {
-    amount: .4
-  },
-  scrollTrigger: {
-    trigger: '.skill-wrapper',
-    start: 'top',
-    end: 'bottom',
-    pin: true,
-  }
-});
 
 const projectData = ref<IProject[]>([
   {
     image: '/projects/pxbox.png',
     title: '全聯福利中心隔日達',
-    description: '開發新功能與維護，使用Vue.js並有前台與管理後台，參與到前台分期付款功能、圖文版面前後台串接的開發等。',
+    description: '短期合作案，開發新功能與維護，使用Vue.js並有前台與管理後台，參與到前台分期付款功能、圖文版面前後台串接的開發等。',
     url: 'https://pxbox.es.pxmart.com.tw/'
   },
   {
@@ -79,7 +64,13 @@ const projectData = ref<IProject[]>([
     image: '/projects/elktree.png',
     title: 'Elk Tree Studio',
     description: '主動向老闆提出由我執行UI設計並切版，使用Nuxt3。',
-    url: 'http://elk-tree.studio//'
+    url: 'http://elk-tree.studio/'
+  },
+  {
+    image: '/projects/aiueo.png',
+    title: '五十音練習機',
+    description: '自製的五十音練習機。使用react(next.js), primereact UI.',
+    url: 'https://aiueo-playground.vercel.app/'
   }
 ]);
 
@@ -90,7 +81,7 @@ const projectData = ref<IProject[]>([
 
 .project-wrapper {
   position: absolute;
-  top: 420vh;
+  top: 440vh;
   flex-direction: column;
   display: flex;
   width: 100%;
@@ -115,7 +106,4 @@ const projectData = ref<IProject[]>([
   }
 }
 
-@media screen and (max-width: 768px) {
-
-}
 </style>

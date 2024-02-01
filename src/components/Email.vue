@@ -1,8 +1,13 @@
 <template>
-  <div class="email-wrapper">
+  <div
+    class="email-wrapper"
+    data-aos="fade-in"
+  >
     <h1>Contact Me</h1>
 
-    <div class="input-container">
+    <div
+      class="input-container"
+    >
       <div class="input-wrap">
         <label
           for="name"
@@ -62,9 +67,8 @@ const email = ref<string>();
 const message = ref<string>();
 
 const columnValidate = () => {
-    return (name.value && email.value && message.value);
-  };
-
+  return (name.value && email.value && message.value);
+};
 
 const tl = gsap.timeline();
 
@@ -77,8 +81,6 @@ tl.to('.email-wrapper', {
     end: 'bottom',
   }
 });
-
-
 
 const sendEmail = () => {
   const columnVerified = columnValidate();
